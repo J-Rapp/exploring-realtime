@@ -1,0 +1,17 @@
+<div>
+
+  <h1>Create a Chatroom on a programming topic</h1>
+    <div>
+      <div>
+        <%= form_for @chatroom do |f| %>
+          <div>
+            <span>topic:</span>
+            <%= f.text_field :topic %>
+          </div>
+          <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+
+    <%= render partial: 'layouts/flash_errors'%>
+</div>
