@@ -1,1 +1,9 @@
-_flash_errors.html.erb
+<% if flash.notice %>
+  <div>
+      <% flash.notice.each do |type, messages|%>
+        <%messages.each do |msg|%>
+          <%=type%> <%=msg%>
+        <%end%>
+      <%end%>
+  </div>
+<%end%>
